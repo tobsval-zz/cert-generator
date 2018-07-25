@@ -1,7 +1,6 @@
 from openpyxl import load_workbook
 from docx.shared import Pt
 import translator
-import shutil
 import docx
 import glob
 
