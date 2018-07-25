@@ -35,12 +35,11 @@ for i in range(*cert_amount_range):
         
         #Substitute the score
         if '10 (dez valores)' in paragraph.text:
-            #Temp vars and variables for the different versions of the grades
             temp = paragraph.text
             grade = str(individual_data[2])
-            separated_grade = grade.split('.')
+            separated_grade = grade.split('.') #Separates floating point grades in two parts, which will then be used for translation
             if len(separated_grade) > 1:
-                separated_grade[1] = separated_grade[1][:2]
+                separated_grade[1] = separated_grade[1][:2] #Truncates the number of decimals in case of float scores (e.g.: 8.333, etc.)
             translated_grade = [translator.translate(elem) for elem in separated_grade]
             
             if len(translated_grade) > 1:
