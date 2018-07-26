@@ -1,10 +1,16 @@
+#!usr/bin/env python
+
 from openpyxl import load_workbook
 from docx.shared import Pt
 import translator
 import docx
 import glob
 
-#Starter docx document search
+__author__ = "Tobia Valerio"
+__license__ = "Apache 2.0"
+__status__ = "Production"
+
+#Starter docx document search within the working directory
 starter_doc = glob.glob('./*.docx')[0].strip('.\\')
 #Excel sheet setup
 wb = load_workbook('excel_file.xlsx', data_only=True)
