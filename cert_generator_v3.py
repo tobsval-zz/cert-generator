@@ -7,7 +7,7 @@ import glob
 #Starter docx document search
 starter_doc = glob.glob('./*.docx')[0].strip('.\\')
 #Excel sheet setup
-wb = load_workbook('excel_file.xlsx', data_only = True)
+wb = load_workbook('excel_file.xlsx', data_only=True)
 sheet = wb['']
 cert_amount_range = (0, 0) #Change the amount here (see excel sheet, values in the tuple equal to the rows interval)
 
