@@ -33,8 +33,8 @@ for i in range(*cert_amount_range):
     font.name = 'Museo 300'
     font.size = Pt(10)
 
-    #Substitute the name in the certificate's template with the owner's name
     for paragraph in doc.paragraphs:
+        #Substitute the name in the certificate's template with the owner's name
         if '...' in paragraph.text:
             temp = paragraph.text
             paragraph.text = temp.replace('...', individual_data[1])
